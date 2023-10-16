@@ -1,0 +1,157 @@
+﻿Question.1
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the size of array : ";
+    cin>>n;
+    int arr[n];
+    //input
+    for(int i=0;i<=n-1;i++){
+        cin>>arr[i];
+    }
+    int prdct=1;
+    for(int i=0;i<=n-1;i++){
+        prdct = prdct*arr[i];
+    }
+    cout<<prdct;
+        return 0;
+}
+
+
+
+
+
+
+Question.2
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the size of array : ";
+    cin>>n;
+    int arr[n];
+    //input
+    for(int i=0;i<=n-1;i++){
+        cin>>arr[i];
+    }
+     // max
+    int max=INT_MIN;
+    for(int i=0; i<=n-1;i++){
+        if(max<arr[i]) max=arr[i];
+    }
+    // smax
+    int smax=INT_MIN;
+    for(int i=0; i<=n-1;i++){
+        if(arr[i] !=max && smax<=arr[i]) smax=arr[i];
+    }
+    cout<<smax;
+}
+
+
+
+
+
+
+Question.3
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the size of array : ";
+    cin>>n;
+    int arr[n];
+    //input
+    for(int i=0;i<=n-1;i++){
+        cin>>arr[i];
+    }
+     // max
+    int min=INT_MAX;
+    for(int i=0; i<=n-1;i++){
+        if(min>arr[i]) min=arr[i];
+    }
+    cout<<min;
+}
+
+
+
+
+
+
+Question.4
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the size of array : ";
+    cin>>n;
+    int arr[n];
+    //input
+    for(int i=0;i<=n-1;i++){
+        cin>>arr[i];
+    }
+    //Duplicate
+    bool flag=false;
+    for(int i=0; i<=n-1; i++){
+        for(int j=i+1; j<=n-1; j++){
+            if(arr[i]==arr[j]){
+                flag=true;
+                cout<<"yes it is duplicate" <<" "<<arr[i];
+                break;
+            }
+        }
+    }
+    if (flag==false){
+        cout<<"no duplicate";
+    }
+    return 0;
+}
+
+
+
+
+
+
+Question.5
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the size of array : ";
+    cin>>n;
+    int arr[n];
+    //input
+    for(int i=0;i<=n-1;i++){
+        cin>>arr[i];
+    }
+    bool flag = false;
+    for(int i=0; i<n; i++){
+        if(arr[i] != i+1){
+            flag=true;
+            cout<<i+1;
+            break;
+        }
+    }
+    if(flag==false){
+        cout<<"there was no missing element ";
+    }
+}
+
+
+
+
+
+
+Question.6
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int sub[50], i ;
+for ( i = 0 ; i <= 48 ; i++ ) ;
+{
+sub[i] = i ;
+cout<<sub[i]<<endl ;
+}
+return 0;
+}
+output: 49
